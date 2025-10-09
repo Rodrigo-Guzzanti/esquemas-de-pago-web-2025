@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pagos/css-pagos/interiorV2.css">
+    <link rel="stylesheet"
+        href="/pagos/css-pagos/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Goya</title>
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://live.pystatic.com/webassets/favicon-8f0ea2519d2575076b739999329af939.ico">
+</head>
+
+<body>
+
+    <div class="overlay" id="overlay">
+        <img
+            src="https://braze-images.com/appboy/communication/assets/image_assets/images/67b47bb5bb5dc900650b683c/original.gif?1739881397">
+    </div>
+
+
+    <div class="nombre-city">
+        <h2> Goya </h2>
+    </div>
+
+    <div class="estructura">
+        <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e41c062c769000632cd995/original.png?1726225413"
+            alt="">
+    </div>
+
+    <div>
+        <select id="menuDesplegable" onchange="mostrarSeccion()">
+            <option value="1">Lun/Sab - 7.00/20.00</option>
+            <option value="2">Lun/Jue - 20:00/Finalizacion</option>
+            <option value="3" selected>Vie/Dom - 20:00/Finalizacion</option>
+            <option value="4">Dom - 07:00/20:00</option>
+        </select>
+
+        <select id="menuDesplegable2" onchange="actualizarResultado()">
+            <option value="1" selected>Grupo 1</option>
+            <option value="2">Grupo 2</option>
+            <option value="3">Grupo 3</option>
+            <option value="4">Grupo 4</option>
+            <option value="5">Grupo 5</option>
+            <option value="6">Grupo 6</option>
+        </select>
+
+
+
+        <!-- SECCION 1 -->
+        <div id="seccion1" class="seccion" data-seccion="1">
+            <h2>Lunes a Viernes de 07:00 a 20:00 </h2>
+
+            <div class="camino">
+                <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e4569fad1393006350adf7/original.png?1726240415"
+                    alt="Linea-de-tiempo-version-web-23" />
+            </div>
+
+            <div class="bloque">
+
+                <div class="bar-container">
+                    <span class="valor-dinamico1-1">$0</span>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e325491c180100633514c0/original.png?1726162249"
+                        alt="Distancia-DO-Rojo" />
+                    <div>
+                        <input type="range" class="distanceLocal-1" min="0" max="8" step="0.1" id="slider" value="1">
+                        <span class="distancia1">0 km</span>
+                    </div>
+                </div>
+
+                <div class="image-text-container">
+                    <div id="valor-estatico1-1"> </div>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e309bb277c8a0065b76be2/original.png?1726155194"
+                        alt="Punto-de-Retiro-Rojo" />
+                </div>
+
+                <div class="bar-container">
+                    <span class="valor-dinamico2-2">$0</span>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/67d055ad9e1c540065ece76d/original.png?1741706668"
+                        alt="Distancia-PU-Rojo" />
+                    <div>
+                        <input type="range" class="distanceUser-1" min="0" max="8" step="0.1" id="slider" value="1">
+                        <span class="distancia2">0 km</span>
+                    </div>
+                </div>
+
+                <div class="image-text-container1">
+                    <div id="valor-estatico2-1"></div>
+                    <span class="valorAdicional"> $0 </span>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e4443f39dbd00065752a1a/original.png?1726235711"
+                        alt="Punto-de-Entrega-Rojo" />
+                </div>
+
+            </div>
+
+            <div class="resultado-claro">
+                <h4 class="texto-resultado"> Ganancia total por pedido: </h4>
+                <span id="result">0.00</span>
+            </div>
+            <h5>*Monto aproximado de un pedido simple</h5>
+        </div>
+
+        <!-- SECCION 2 -->
+        <div id="seccion2" class="seccion" data-seccion="2">
+            <h2> Lunes a Jueves - 20:00hs a Finalizacion </h2>
+
+            <div class="camino">
+                <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e4569fad1393006350adf7/original.png?1726240415"
+                    alt="Linea-de-tiempo-version-web-23" />
+            </div>
+
+            <div class="bloque">
+
+                <div class="bar-container">
+                    <span class="valor-dinamico1-1">$0</span>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e309bb90dcde006383109d/original.png?1726155194"
+                        alt="Distancia-DO-Negro" />
+                    <div>
+                        <input type="range" class="distanceLocal-1" min="0" max="8" step="0.1" id="slider1" value="1">
+                        <span class="distancia1">0 km</span>
+                    </div>
+                </div>
+
+                <div class="image-text-container">
+                    <div id="valor-estatico1-2"> </div>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e309bbf0b74700633a4c5f/original.png?1726155194"
+                        alt="Punto-de-Retiro-Negro" />
+                </div>
+
+                <div class="bar-container">
+                    <span class="valor-dinamico2-2">$0</span>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/67d2d1a4afe0770064a8bf93/original.png?1741869475"
+                        alt="Distancia-PU-Negro" />
+                    <div>
+                        <input type="range" class="distanceUser-1" min="0" max="8" step="0.1" id="slider1" value="1">
+                        <span class="distancia2">0 km</span>
+                    </div>
+                </div>
+
+                <div class="image-text-container1">
+                    <div id="valor-estatico2-2"> </div>
+                    <span class="valorAdicional"> $0 </span>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e4443f3044a20063f147e0/original.png?1726235711"
+                        alt="Punto-de-Entrega-Negro" />
+                </div>
+
+            </div>
+
+            <div class="resultado-claro">
+                <h4 class="texto-resultado"> Ganancia total por pedido: </h4>
+                <span id="result1">0.00</span>
+            </div>
+            <h5>*Monto aproximado de un pedido simple</h5>
+
+        </div>
+
+        <!-- SECCION 3 -->
+        <div id="seccion3" class="seccion" data-seccion="3">
+            <h2> Viernes a Domingo - 20:00hs a Finalizacion</h2>
+
+            <div class="camino">
+                <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e4569fad1393006350adf7/original.png?1726240415"
+                    alt="Linea-de-tiempo-version-web-23" />
+            </div>
+
+            <div class="bloque">
+
+                <div class="bar-container">
+                    <span class="valor-dinamico1-1">$0</span>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e309bb90dcde006383109d/original.png?1726155194"
+                        alt="Distancia-DO-Negro" />
+                    <div>
+                        <input type="range" class="distanceLocal-1" min="0" max="8" step="0.1" id="slider1" value="1">
+                        <span class="distancia1">0 km</span>
+                    </div>
+                </div>
+
+                <div class="image-text-container">
+                    <div id="valor-estatico1-3"> </div>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e309bbf0b74700633a4c5f/original.png?1726155194"
+                        alt="Punto-de-Retiro-Rojo" />
+                </div>
+
+                <div class="bar-container">
+                    <span class="valor-dinamico2-2">$0</span>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/67d2d1a4afe0770064a8bf93/original.png?1741869475"
+                        alt="Distancia-PU-Negro" />
+                    <div>
+                        <input type="range" class="distanceUser-1" min="0" max="8" step="0.1" id="slider1" value="1">
+                        <span class="distancia2">0 km</span>
+                    </div>
+                </div>
+
+                <div class="image-text-container1">
+                    <div id="valor-estatico2-3"> </div>
+                    <span class="valorAdicional"> $0 </span>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e4443f3044a20063f147e0/original.png?1726235711"
+                        alt="Punto-de-Entrega-Negro" />
+                </div>
+
+            </div>
+
+            <div class="resultado-claro">
+                <h4 class="texto-resultado"> Ganancia total por pedido: </h4>
+                <span id="result1">0.00</span>
+            </div>
+            <h5>*Monto aproximado de un pedido simple</h5>
+
+        </div>
+
+        <!-- SECCION 4 -->
+        <div id="seccion4" class="seccion" data-seccion="4">
+            <h2> Sabado a Domingo - 07:00hs a 20:00hs </h2>
+
+            <div class="camino">
+                <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e4569fad1393006350adf7/original.png?1726240415"
+                    alt="Linea-de-tiempo-version-web-23" />
+            </div>
+
+            <div class="bloque">
+
+                <div class="bar-container">
+                    <span class="valor-dinamico1-1">$0</span>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e325491c180100633514c0/original.png?1726162249"
+                        alt="Distancia-DO-Rojo" />
+                    <div>
+                        <input type="range" class="distanceLocal-1" min="0" max="8" step="0.1" id="slider" value="1">
+                        <span class="distancia1">0 km</span>
+                    </div>
+                </div>
+
+                <div class="image-text-container">
+                    <div id="valor-estatico1-4"></div>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e309bb277c8a0065b76be2/original.png?1726155194"
+                        alt="Punto-de-Retiro-Rojo" />
+                </div>
+
+                <div class="bar-container">
+                    <span class="valor-dinamico2-2">$0</span>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/67d055ad9e1c540065ece76d/original.png?1741706668"
+                        alt="Distancia-PU-Rojo" />
+                    <div>
+                        <input type="range" class="distanceUser-1" min="0" max="8" step="0.1" id="slider" value="1">
+                        <span class="distancia2">0 km</span>
+                    </div>
+                </div>
+
+                <div class="image-text-container1">
+                    <div id="valor-estatico2-4"></div>
+                    <span class="valorAdicional"> $0 </span>
+                    <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66e4443f39dbd00065752a1a/original.png?1726235711"
+                        alt="Punto-de-Entrega-Rojo" />
+                </div>
+
+            </div>
+
+            <div class="resultado-claro">
+                <h4 class="texto-resultado"> Ganancia total por pedido: </h4>
+                <span id="result">0.00</span>
+            </div>
+            <h5>*Monto aproximado de un pedido simple</h5>
+
+        </div>
+
+        <div class="content">
+
+            <!-- La tabla donde se mostrarán los datos -->
+            <table class="data-table" id="dataTable">
+                <thead>
+                    <tr>
+                        <th class="dia"> </th>
+                        <th class="dia"> </th>
+                        <th class="punto-retiro">
+                            <div>
+                                <img class="icono-retiro"
+                                    src="https://braze-images.com/appboy/communication/assets/image_assets/images/67c080e95587870061ee3e51/original.png?1740669161"
+                                    alt="">
+                                <span> Punto de retiro </span>
+                            </div>
+                        </th>
+                        <th class="punto-entrega">
+                            <div>
+                                <img class="icono-entrega"
+                                    src="https://braze-images.com/appboy/communication/assets/image_assets/images/67c081164a1ede0061bcc7a5/original.png?1740669206"
+                                    alt="">
+                                <span> Punto de entrega </span>
+                            </div>
+                        </th>
+                    </tr>
+
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Aquí se agregarán las filas dinámicamente -->
+                </tbody>
+
+            </table>
+
+            <table class="data-table2" id="dataTable2">
+                <thead>
+                    <tr>
+                        <th class="tramo"> </th>
+                        <th class="tramo"> </th>
+                        <th class="monto-km">
+                            <div>
+                                <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/67c080dab7897f006101000a/original.png?1740669146"
+                                    alt="">
+                                <h3> Monto por km </h3>
+                            </div>
+                            <h5> Al punto de retiro </h5>
+                        </th>
+                        <th class="monto-km">
+                            <div>
+                                <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/67c080dab7897f006101000a/original.png?1740669146"
+                                    alt="">
+                                <h3> Monto por km </h3>
+                            </div>
+                            <h5> Al punto de entrega </h5>
+                        </th>
+                    </tr>
+
+                </thead>
+                <tbody id="tableBody2">
+                    <!-- Aquí se agregarán las filas dinámicamente -->
+                </tbody>
+            </table>
+
+
+        </div>
+
+        <div class="extra">
+            <button id="mostrarImagenBtn">
+                <i class="fa-solid fa-arrow-down"></i>
+                Extra exclusivo para riders nuevos
+            </button>
+            <div id="imagenContainer" class="oculto">
+                <img class="incentivo_img1"
+                    src="https://braze-images.com/appboy/communication/assets/image_assets/images/66fac448e6bad100816f1203/original.png?1727710280"
+                    alt="">
+            </div>
+        </div>
+
+        <div class="incentivo_nocturno">
+            <img class="incentivo_img" id="linkRAF" src="" alt="">
+        </div>
+
+        <div class="extra">
+            <a href="https://www.google.com/maps/d/u/0/viewer?hl=es-419&ll=-34.58523428842077%2C-58.50514322191967&z=12&mid=16VXdDP6mf7GYmYSKfvWc7DBfji-pFYA"
+                class="container_boton"></a>
+            <button class="boton_zona"> ¡Conocé todas las zonas de logueo! </button>
+            </a>
+        </div>
+
+        <footer class="footer">
+            <h2> RESUMEN SEMANAL </h2>
+            <h3> Para conocer en profundidad como se compone el pago de tus honorarios, los días miércoles recibirás en
+                tu correo un resumen que corresponde al adelanto semanal que se te abona por los servicios prestados
+                desde el lunes al domingo inclusive de la semana anterior. En dicho resumen podrás ver en detalle y los
+                conceptos que conforman tus ganancias y sus montos correspondientes. </h3>
+            <a href="https://riders.repartosya.com.ar/categorias/pagos.html" class="container_boton">
+                <button class="boton"> ¡Conocé los conceptos del Resumen Semanal! </button>
+            </a>
+        </footer>
+
+    </div>
+
+
+    <script src="/pagos/js-pagos/calculos-interior-v2.js?=v2.2" defer> </script>
+    <script src="/pagos/js-pagos/linksRAF.js"></script>
+
+
+</body>
+
+</html>
